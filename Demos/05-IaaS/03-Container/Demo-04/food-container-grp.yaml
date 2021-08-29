@@ -1,0 +1,45 @@
+apiVersion: 2019-12-01
+location: westeurope
+name: foodapp-cg
+properties:
+  containers:
+  - name: sqllinux
+    properties:
+      image: mcr.microsoft.com/mssql/server:2019-latest
+      environmentVariables:
+      - name: ACCEPT_EULA
+        value: 'Y'
+      - name: SA_PASSWORD
+        secureValue: 'TiTp4SQL@dmin'
+      resources:
+        requests:
+          cpu: 1
+          memoryInGb: 1.5
+  - name: foodapi
+    properties:
+      image: arambazamba/foodservice
+      resources:
+        requests:
+          cpu: 1
+          memoryInGb: 1        
+      ports:
+      - port: 80
+  # - name: foodui
+  #   properties:
+  #     image: arambazamba/foodui
+  #     resources:
+  #       requests:
+  #         cpu: 1
+  #         memoryInGb: 1.5
+      # ports:
+      # - port: 80
+      # - port: 80
+  osType: Linux
+  ipAddress:
+    type: Public
+    ports:
+    - protocol: tcp
+      port: 80
+    dnsNameLabel: foodapi
+tags: {class: az-204}
+type: Microsoft.ContainerInstance/containerGroups  

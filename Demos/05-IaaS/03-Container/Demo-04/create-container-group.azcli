@@ -1,0 +1,12 @@
+rnd=$RANDOM
+grp=az204-m05-containergroup-$rnd
+loc=westeurope
+app=foodapp-cg
+
+az group create -n $grp -l $loc
+
+az container create -g $grp -l $loc -n $app --file food-container-grp.yaml 
+#   --vnet food-vnet \
+#   --vnet-address-prefix 10.0.0.0/16 \
+#   --subnet aci-subnet \
+#   --subnet-address-prefix 10.0.0.0/24
