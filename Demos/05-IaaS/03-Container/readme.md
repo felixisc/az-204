@@ -12,6 +12,8 @@
 
 ## Readings
 
+[NGINX](https://www.nginx.com/)
+
 [Azure Container Registry](https://docs.microsoft.com/en-us/azure/container-registry/)
 
 [Web App for Containers](https://docs.microsoft.com/en-us/azure/app-service/containers/)
@@ -24,9 +26,7 @@
 
 [Develop on Azure Kubernetes Service (AKS) with Helm](https://docs.microsoft.com/en-us/azure/aks/quickstart-helm)
 
-[Azure DevSpaces](https://docs.microsoft.com/en-us/azure/dev-spaces/)
-
-[NGINX](https://www.nginx.com/)
+[Bridge to Kubernetes](https://docs.microsoft.com/en-us/visualstudio/bridge/)
 
 ## CLI Reference
 
