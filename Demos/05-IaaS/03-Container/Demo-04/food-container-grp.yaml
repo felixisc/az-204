@@ -21,25 +21,25 @@ properties:
       resources:
         requests:
           cpu: 1
-          memoryInGb: 1        
+          memoryInGb: 1   
+      environmentVariables:
+      - name: ASPNETCORE_URLS
+        value: "http://localhost:5001"     
+  - name: foodui
+    properties:
+      image: arambazamba/foodui
+      resources:
+        requests:
+          cpu: 1
+          memoryInGb: 1
       ports:
       - port: 80
-  # - name: foodui
-  #   properties:
-  #     image: arambazamba/foodui
-  #     resources:
-  #       requests:
-  #         cpu: 1
-  #         memoryInGb: 1.5
-      # ports:
-      # - port: 80
-      # - port: 80
   osType: Linux
   ipAddress:
     type: Public
     ports:
     - protocol: tcp
       port: 80
-    dnsNameLabel: foodapi
+    dnsNameLabel: foodapp
 tags: {class: az-204}
 type: Microsoft.ContainerInstance/containerGroups  
