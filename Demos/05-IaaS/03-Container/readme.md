@@ -6,6 +6,7 @@
 -   Deploy to Azure Container Registry
 -   Use Azure Container Registry Build Task
 -   Deploy to Azure Container Instances & Web Apps for Containers
+-   Using Container Groups in ACI (optional)
 -   Kubernetes Intro (optional)
 -   Helm (optional)
 
