@@ -8,4 +8,11 @@ Uses FoodApp from [https://github.com/arambazamba/FoodApp](https://github.com/ar
 
 - Explain `foodapp-container-grp.yaml`
 - Run `create-container-group.azcli`
+- Connect to Api Container and execute REST call
+
+    ```
+    curl http://localhost:8080/food -o data.json
+    cat data.json
+    ```
+
 - Use vi to change `/usr/share/nginx/html/assets/app-config.json` to point to correct api endpoint. In a real world deployment this could be done as part of a file replacement in the DevOps pipeline.
